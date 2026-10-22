@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f7f2e9">
   <meta name="description" content="Thoughtful restoration of treasured photographs. Bring faded, damaged, and timeworn family memories back to life.">
-  <title>Timeless Photo Revival | Photo Restoration</title>
+  <title>Photographic Memory Atelier | Photo Restoration</title>
   <style>
     :root{--paper:#f7f2e9;--ink:#282a24;--muted:#68685f;--olive:#5c654b;--olive-dark:#3f4935;--clay:#b87558;--line:#ddd5c8;--white:#fffdf8;--serif:Georgia,'Times New Roman',serif;--sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
     *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6}
@@ -51,7 +51,7 @@
   <div class="announcement">Every photograph holds a story. Let’s help yours live on.</div>
   <header>
     <div class="wrap nav">
-      <a class="brand" href="#top">Timeless Photo Revival<small>Thoughtful photo restoration</small></a>
+      <a class="brand" href="#top">Photographic Memory Atelier<small>Thoughtful photo restoration</small></a>
       <nav aria-label="Main navigation">
         <a href="#services">Services</a><a href="#work">Gallery</a><a href="#process">How it works</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
       </nav>
@@ -64,7 +64,7 @@
           <div class="eyebrow">Preserve what matters</div>
           <h1>Old photographs.<br><em>New life.</em></h1>
           <p>Faded faces, cracked prints, and family memories deserve to be treasured. I restore photographs with care, helping bring beloved moments back into focus while honoring their original character.</p>
-          <div class="actions"><a class="btn" href="#contact">Ask about a restoration</a><a class="btn secondary" href="#work">Explore the gallery</a></div>
+          <div class="actions"><a class="btn" href="#contact">Ask about a restoration or Photography session</a><a class="btn secondary" href="#work">Explore the gallery</a></div>
           <p class="note">Personal, careful restoration for the photographs you can’t replace.</p>
         </div>
         <div class="photo-art" aria-label="Illustration of a cherished vintage portrait">
@@ -80,6 +80,7 @@
           <article class="card"><div class="num">01 / REPAIR</div><h3>Damage &amp; wear</h3><p>Careful digital repair of scratches, creases, tears, spots, and other signs of age where possible.</p></article>
           <article class="card"><div class="num">02 / REVIVE</div><h3>Faded photographs</h3><p>Improve contrast, tone, and clarity to help old or faded images feel more vivid while keeping them natural.</p></article>
           <article class="card"><div class="num">03 / PRESERVE</div><h3>Family keepsakes</h3><p>Digitally preserve meaningful portraits and family moments so they’re easier to share, print, and enjoy.</p></article>
+          <article class="card"><div class="num">03 / CAPTURE</div><h3>Photography Services</h3><p>I offer photography sessions for individuals, families, and special occasions. Let me help you capture life's meaningful moments with beautiful photographs you'll treasure for years to come.</p></article>
         </div>
       </div>
     </section>
@@ -120,12 +121,12 @@
     </section>
     <section id="contact">
       <div class="wrap contact-grid">
-        <div><div class="eyebrow">Get in touch</div><h2>Tell me about your photograph.</h2><p>Share a little about the image and the kind of restoration you have in mind. I’ll follow up to discuss next steps.</p><p class="smallprint">This starter website uses your email app to send inquiries. Before publishing, replace the placeholder email in the code with an email address you want customers to use.</p></div>
+        <div><div class="eyebrow">Get in touch</div><h2>Let's Bring Your Memories to Life</h2><p>Wheter you need a treasured photograph restored, family photos digitized, or a photography session, I'd love to hear from you!</p><p class="smallprint">This starter website uses your email app to send inquiries. Before publishing, replace the placeholder email in the code with an email address you want customers to use.</p></div>
         <form class="contact-panel" id="inquiryForm">
           <label for="name">Your name</label><input id="name" name="name" autocomplete="name" required placeholder="Name">
           <label for="email">Your email</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
           <label for="service">What does your photo need?</label><select id="service" name="service"><option>Not sure yet</option><option>Scratch, tear, or damage repair</option><option>Faded photo enhancement</option><option>Black-and-white colorization</option><option>Family photo preservation</option><option>Something else</option></select>
-          <label for="message">Tell me a little about it</label><textarea id="message" name="message" required placeholder="What is the photo like, and what would you love to improve?"></textarea>
+          <label for="message">Tell me about your photograph or photography needs</label><textarea id="message" name="message" required placeholder="Please describe your photo restoration project or photography needs, including any details you would like me to know."></textarea>
           <button class="btn" type="submit">Prepare email inquiry</button>
           <p class="smallprint">Please don’t include private or sensitive information in your message. This form does not upload or store photographs.</p>
           <p id="formStatus" class="smallprint" aria-live="polite"></p>
@@ -133,10 +134,10 @@
       </div>
     </section>
   </main>
-  <footer><div class="wrap footer-row"><span>© <span id="year"></span> Timeless Photo Revival</span><span>Made with care for the memories that matter.</span></div></footer>
+  <footer><div class="wrap footer-row"><span>© <span id="year"></span> Photographic Memory Atelier</span><span>Made with care for the memories that matter.</span></div></footer>
   <script>
     // IMPORTANT: Replace this with the email address you want restoration inquiries sent to.
-    const BUSINESS_EMAIL = "YOUR-EMAIL@example.com";
+    const BUSINESS_EMAIL = "Photographic Memory Atelier";
     document.getElementById("year").textContent = new Date().getFullYear();
     document.getElementById("inquiryForm").addEventListener("submit", function(event) {
       event.preventDefault();
@@ -150,7 +151,7 @@
         "About the photograph:",
         form.get("message")
       ].join("\n");
-      if (BUSINESS_EMAIL === "YOUR-EMAIL@example.com") {
+      if (BUSINESS_EMAIL === "starrynightfotos@gmail.com") {
         document.getElementById("formStatus").textContent = "Before using this form, update BUSINESS_EMAIL in the website code with your email address.";
         return;
       }

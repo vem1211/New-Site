@@ -151,10 +151,7 @@
         "About the photograph:",
         form.get("message")
       ].join("\n");
-      if (BUSINESS_EMAIL === "starrynightfotos@gmail.com") {
-        document.getElementById("formStatus").textContent = "Before using this form, update BUSINESS_EMAIL in the website code with your email address.";
-        return;
-      }
+    
       window.location.href = "mailto:" + BUSINESS_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
       document.getElementById("formStatus").textContent = "Your email app should open with your inquiry ready to send.";
     });

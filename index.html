@@ -1,15 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#40213f">
-  <meta name="description" content="Thoughtful restoration of treasured photographs. Bring faded, damaged, and timeworn family memories back to life.">
-  <title>Photographic Memory Atelier | Photography &amp; Restoration</title>
-
+  <meta name="description" content="Victoria Elizabeth Studio restores treasured photographs and preserves photographic memories with care. Mit Liebe bewahrt — preserved with love.">
+  <title>Victoria Elizabeth Studio | Photographic Memories</title>
   <style>
     :root {
-      /* Plum, mauve, and lavender palette */
       --paper: #faf6f4;
       --ink: #38263a;
       --muted: #746775;
@@ -24,98 +22,88 @@
       --serif: Georgia, "Times New Roman", serif;
       --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
-
     * {
       box-sizing: border-box;
     }
-
     html {
       scroll-behavior: smooth;
       scroll-padding-top: 24px;
     }
-
     body {
       margin: 0;
       background: var(--paper);
       color: var(--ink);
       font-family: var(--sans);
-      line-height: 1.7;
+      line-height: 1.65;
     }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
     a {
       color: inherit;
     }
-
+    img {
+      max-width: 100%;
+    }
     .wrap {
       width: min(1120px, calc(100% - 40px));
-      margin: auto;
+      margin: 0 auto;
     }
-
     .announcement {
       background: var(--plum-dark);
       color: #fff8ff;
       text-align: center;
-      padding: 10px 16px;
-      font-size: .82rem;
-      letter-spacing: .05em;
+      padding: 9px 16px;
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
     }
-
     header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
       border-bottom: 1px solid var(--line);
-      background: rgba(250, 246, 244, .97);
-      backdrop-filter: blur(12px);
+      background: rgba(250, 246, 244, 0.97);
     }
-
     .nav {
-      min-height: 78px;
+      min-height: 88px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 24px;
+      padding: 14px 0;
     }
-
     .brand {
+      display: inline-block;
       font-family: var(--serif);
-      font-size: 1.35rem;
+      font-size: clamp(1.2rem, 2vw, 1.55rem);
       text-decoration: none;
-      line-height: 1.1;
+      line-height: 1.15;
     }
-
     .brand small {
       display: block;
-      font: .68rem var(--sans);
-      letter-spacing: .19em;
+      margin-top: 7px;
+      font: 0.68rem var(--sans);
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-top: 7px;
     }
-
+    .brand-tagline {
+      display: block;
+      margin-top: 6px;
+      color: var(--plum);
+      font-family: var(--serif);
+      font-size: 0.94rem;
+      font-style: italic;
+    }
     nav {
       display: flex;
-      gap: 22px;
+      flex-wrap: wrap;
+      gap: 12px 21px;
       align-items: center;
     }
-
     nav a {
       text-decoration: none;
-      font-size: .9rem;
-      transition: color .2s ease;
+      font-size: 0.9rem;
     }
-
     nav a:hover {
       color: var(--plum);
       text-decoration: underline;
       text-underline-offset: 5px;
     }
-
     .btn {
       display: inline-flex;
       justify-content: center;
@@ -127,264 +115,217 @@
       text-decoration: none;
       font-weight: 650;
       border: 1px solid var(--plum);
-      transition: background .2s ease, border-color .2s ease;
+      transition: 0.2s;
     }
-
     .btn:hover {
       background: var(--plum-dark);
       border-color: var(--plum-dark);
     }
-
     .btn.secondary {
       background: transparent;
-      color: var(--plum-dark);
-      border-color: var(--mauve);
+      color: var(--ink);
+      border-color: var(--line);
     }
-
     .btn.secondary:hover {
       background: var(--soft-lilac);
+      border-color: var(--mauve);
     }
-
-    /* Homepage */
-
     .hero {
-      padding: 88px 0 82px;
-      background:
-        radial-gradient(ellipse at 90% 10%, #e9dce9 0%, transparent 40%),
-        var(--paper);
+      padding: 86px 0 82px;
     }
-
     .hero-copy {
-      max-width: 800px;
+      max-width: 790px;
     }
-
     .eyebrow {
-      font-size: .76rem;
+      font-size: 0.76rem;
       text-transform: uppercase;
-      letter-spacing: .18em;
+      letter-spacing: 0.18em;
       color: var(--plum);
       font-weight: 750;
     }
-
     h1, h2, h3 {
       font-family: var(--serif);
       font-weight: 500;
-      line-height: 1.15;
+      line-height: 1.12;
     }
-
     h1 {
-      font-size: clamp(2.8rem, 6vw, 5.2rem);
-      letter-spacing: -.045em;
+      font-size: clamp(2.7rem, 5.4vw, 5rem);
+      letter-spacing: -0.045em;
       margin: 18px 0 22px;
     }
-
     h1 em {
       color: var(--plum);
       font-weight: 400;
     }
-
     .hero p {
       font-size: 1.08rem;
       color: var(--muted);
       max-width: 670px;
     }
-
     .actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
       margin-top: 28px;
     }
-
     .note {
-      font-size: .82rem !important;
+      font-size: 0.82rem !important;
       margin-top: 17px;
     }
-
-    /* General sections */
-
     section {
       padding: 78px 0;
     }
-
+    .soft {
+      background: var(--soft-lilac);
+    }
     .section-head {
-      max-width: 700px;
+      max-width: 720px;
       margin-bottom: 34px;
     }
-
     .section-head h2 {
       font-size: clamp(2.1rem, 4vw, 3.4rem);
       margin: 12px 0;
     }
-
     .section-head p {
       color: var(--muted);
     }
-
-    .soft {
-      background: var(--soft-lilac);
-    }
-
-    /* Services */
-
     .cards {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
     }
-
     .card {
       background: var(--white);
       padding: 27px;
       border: 1px solid var(--line);
-      border-radius: 3px;
-      transition: border-color .2s ease, transform .2s ease;
+      transition: border-color 0.2s, transform 0.2s;
     }
-
     .card:hover {
       border-color: var(--mauve);
       transform: translateY(-2px);
     }
-
     .card .num {
-      font-size: .75rem;
-      letter-spacing: .15em;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
       color: var(--plum);
       font-weight: 800;
     }
-
     .card h3 {
       font-size: 1.55rem;
       margin: 17px 0 10px;
     }
-
     .card p {
       color: var(--muted);
       margin-bottom: 0;
     }
-
-    /* Before-and-after gallery */
-
     .gallery-intro {
       max-width: 730px;
       color: var(--muted);
     }
-
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 30px;
       margin-top: 36px;
     }
-
     .gallery-card {
       min-width: 0;
       background: var(--white);
       border: 1px solid var(--line);
       padding: 14px;
-      box-shadow: 0 8px 24px rgba(64, 33, 63, .06);
+      box-shadow: 0 8px 24px rgba(64, 33, 63, 0.06);
     }
-
     .gallery-card h3 {
       font-size: 1.55rem;
       margin: 12px 4px 4px;
     }
-
     .gallery-description {
       margin: 0 4px 15px;
       color: var(--muted);
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
-
     .comparison {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
     }
-
     .photo-frame {
       min-width: 0;
       margin: 0;
     }
-
     .photo-frame img {
+      display: block;
       width: 100%;
       aspect-ratio: 4 / 5;
       object-fit: contain;
       background: #eee5ed;
       border: 1px solid var(--line);
     }
-
     .photo-frame figcaption {
       padding: 9px 5px 3px;
       text-align: center;
       color: var(--plum-dark);
-      font-size: .76rem;
+      font-size: 0.76rem;
       font-weight: 750;
-      letter-spacing: .09em;
+      letter-spacing: 0.09em;
       text-transform: uppercase;
     }
-
     .gallery-note {
       margin-top: 28px;
       color: var(--muted);
-      font-size: .86rem;
+      font-size: 0.86rem;
     }
-
-    /* Restoration process */
-
     .steps {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 28px;
     }
-
     .step {
       border-top: 1px solid var(--mauve);
       padding-top: 18px;
     }
-
     .step h3 {
       font-size: 1.5rem;
       margin: 10px 0;
     }
-
     .step p {
       color: var(--muted);
     }
-
-    /* About */
-
-    #about {
-      scroll-margin-top: 100px;
-    }
-
     .about-grid {
       display: grid;
-      grid-template-columns: .75fr 1.25fr;
+      grid-template-columns: 0.75fr 1.25fr;
       gap: 46px;
       align-items: start;
     }
-
     .about-mark {
       font-size: clamp(2.3rem, 4vw, 3.6rem);
       line-height: 1.12;
       color: var(--plum);
       margin: 12px 0;
     }
-
     .about-copy {
       max-width: 760px;
     }
-
     .about-copy p {
       color: var(--muted);
       margin-top: 0;
       margin-bottom: 20px;
     }
-
-    /* Call to action */
-
+    .heritage-note {
+      margin-top: 26px;
+      padding: 23px 25px;
+      border-left: 3px solid var(--mauve);
+      background: var(--soft-lilac);
+    }
+    .heritage-note h3 {
+      margin: 0 0 8px;
+      font-size: 1.4rem;
+      color: var(--plum-dark);
+    }
+    .heritage-note p {
+      margin: 0;
+      color: var(--muted);
+    }
     .quote {
       background: var(--plum-dark);
       color: #fff8ff;
@@ -395,90 +336,70 @@
       align-items: center;
       gap: 30px;
     }
-
     .quote h2 {
       font-size: clamp(2rem, 4vw, 3.2rem);
       margin: 0 0 12px;
     }
-
     .quote p {
       color: #e9dce9;
       margin: 0;
     }
-
     .quote .btn {
       background: #fff8ff;
       color: var(--plum-dark);
       border-color: #fff8ff;
       white-space: nowrap;
     }
-
     .quote .btn:hover {
       background: var(--lavender);
       border-color: var(--lavender);
     }
-
-    /* FAQ */
-
     .faq {
       max-width: 800px;
     }
-
     .faq details {
       border-top: 1px solid var(--line);
       padding: 19px 0;
     }
-
     .faq details:last-child {
       border-bottom: 1px solid var(--line);
     }
-
     .faq summary {
       cursor: pointer;
       font-family: var(--serif);
       font-size: 1.25rem;
     }
-
     .faq summary:hover {
       color: var(--plum);
     }
-
     .faq details p {
       color: var(--muted);
       max-width: 700px;
     }
-
-    /* Contact */
-
     .contact-grid {
       display: grid;
-      grid-template-columns: .8fr 1.2fr;
+      grid-template-columns: 0.8fr 1.2fr;
       gap: 50px;
       align-items: start;
     }
-
     .contact-grid h2 {
       font-size: clamp(2.2rem, 4vw, 3.5rem);
       margin: 10px 0;
     }
-
     .contact-grid p {
       color: var(--muted);
     }
-
     .contact-panel {
       background: var(--white);
       border: 1px solid var(--line);
       padding: 28px;
     }
-
     .contact-panel label {
       display: block;
       font-weight: 650;
-      font-size: .9rem;
+      font-size: 0.9rem;
       margin: 14px 0 6px;
     }
-
     .contact-panel input,
     .contact-panel textarea,
     .contact-panel select {
@@ -490,19 +411,16 @@
       border-radius: 2px;
       color: var(--ink);
     }
-
     .contact-panel input:focus,
     .contact-panel textarea:focus,
     .contact-panel select:focus {
       outline: 2px solid var(--mauve);
       outline-offset: 2px;
     }
-
     .contact-panel textarea {
       min-height: 120px;
       resize: vertical;
     }
-
     .contact-panel .btn {
       margin-top: 18px;
       cursor: pointer;
@@ -510,58 +428,42 @@
       font: inherit;
       font-weight: 700;
     }
-
     .smallprint {
-      font-size: .8rem !important;
+      font-size: 0.8rem !important;
     }
-
-    /* Footer */
-
     footer {
       border-top: 1px solid var(--line);
       padding: 27px 0;
       color: var(--muted);
-      font-size: .83rem;
+      font-size: 0.83rem;
     }
-
     .footer-row {
       display: flex;
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
     }
-
-    /* Mobile layout */
-
     @media (max-width: 760px) {
       .wrap {
         width: min(100% - 30px, 560px);
       }
-
       .nav {
-        padding: 15px 0;
         align-items: flex-start;
         flex-direction: column;
       }
-
       .nav nav {
         width: 100%;
         gap: 12px 16px;
-        flex-wrap: wrap;
       }
-
       .nav nav a {
-        font-size: .86rem;
+        font-size: 0.86rem;
       }
-
       .hero {
         padding: 55px 0;
       }
-
       section {
         padding: 55px 0;
       }
-
       .cards,
       .steps,
       .contact-grid,
@@ -569,74 +471,57 @@
       .gallery-grid {
         grid-template-columns: 1fr;
       }
-
       .gallery-grid {
         gap: 22px;
       }
-
       .quote {
         grid-template-columns: 1fr;
         padding: 32px 24px;
       }
-
       .quote .btn {
         justify-self: start;
       }
-
       .section-head {
         margin-bottom: 25px;
       }
-
-      .about-grid {
-        gap: 18px;
-      }
-
+      .about-grid,
       .contact-grid {
         gap: 25px;
       }
     }
-
     @media (max-width: 380px) {
       .comparison {
         gap: 6px;
       }
-
       .photo-frame figcaption {
-        font-size: .68rem;
-        letter-spacing: .05em;
+        font-size: 0.68rem;
+        letter-spacing: 0.05em;
       }
-
       .gallery-card {
         padding: 9px;
       }
     }
-
     @media (prefers-reduced-motion: reduce) {
       html {
         scroll-behavior: auto;
       }
-
-      *,
-      *::before,
-      *::after {
+      *, *::before, *::after {
         transition: none !important;
       }
     }
   </style>
 </head>
-
 <body>
   <div class="announcement">
     Every photograph holds a story. Let’s help yours live on.
   </div>
-
   <header>
     <div class="wrap nav">
-      <a class="brand" href="#top">
-        Photographic Memory Atelier
-        <small>Thoughtful photo restoration</small>
+      <a class="brand" href="#top" aria-label="Victoria Elizabeth Studio home">
+        Victoria Elizabeth Studio
+        <small>Photographic Memories</small>
+        <span class="brand-tagline">Mit Liebe bewahrt</span>
       </a>
-
       <nav aria-label="Main navigation">
         <a href="#services">Services</a>
         <a href="#work">Gallery</a>
@@ -647,392 +532,279 @@
       </nav>
     </div>
   </header>
-
   <main id="top">
-
-    <!-- Homepage introduction -->
     <section class="hero">
       <div class="wrap">
         <div class="hero-copy">
           <div class="eyebrow">Preserve what matters</div>
-
-          <h1>
-            Old photographs.<br>
-            <em>New life.</em>
-          </h1>
-
+          <h1>Old photographs.<br><em>New life.</em></h1>
           <p>
-            Faded faces, cracked prints, and family memories deserve
-            to be treasured. I restore photographs with care, helping
-            bring beloved moments back into focus while honoring
-            their original character.
+            Faded faces, cracked prints, and family memories deserve to be treasured.
+            I restore photographs with care, helping bring beloved moments back into
+            focus while honoring their original character.
           </p>
-
           <div class="actions">
-            <a class="btn" href="#contact">
-              Ask about a restoration or photography session
-            </a>
-            <a class="btn secondary" href="#work">
-              Explore the gallery
-            </a>
+            <a class="btn" href="#contact">Ask about a restoration or photography session</a>
+            <a class="btn secondary" href="#work">Explore the gallery</a>
           </div>
-
           <p class="note">
             Personal, careful restoration for the photographs you can’t replace.
           </p>
         </div>
       </div>
     </section>
-
-    <!-- Services -->
     <section class="soft" id="services">
       <div class="wrap">
         <div class="section-head">
           <div class="eyebrow">What I can help with</div>
           <h2>Give treasured memories a little care.</h2>
           <p>
-            Every photograph is different. Tell me about yours,
-            and we can discuss the best way to preserve it.
+            Every photograph is different. Tell me about yours, and we can discuss
+            the best way to preserve it.
           </p>
         </div>
-
         <div class="cards">
           <article class="card">
             <div class="num">01 / REPAIR</div>
             <h3>Damage &amp; wear</h3>
             <p>
-              Careful digital repair of scratches, creases, tears,
-              spots, and other signs of age where possible.
+              Careful digital repair of scratches, creases, tears, spots, and
+              other signs of age where possible.
             </p>
           </article>
-
           <article class="card">
             <div class="num">02 / REVIVE</div>
             <h3>Faded photographs</h3>
             <p>
-              Improve contrast, tone, and clarity to help old or
-              faded images feel more vivid while keeping them natural.
+              Improve contrast, tone, and clarity to help old or faded images
+              feel more vivid while keeping them natural.
             </p>
           </article>
-
           <article class="card">
             <div class="num">03 / PRESERVE</div>
             <h3>Family keepsakes</h3>
             <p>
-              Digitally preserve meaningful portraits and family
-              moments so they’re easier to share, print, and enjoy.
+              Digitally preserve meaningful portraits and family moments so
+              they’re easier to share, print, and enjoy.
             </p>
           </article>
-
           <article class="card">
             <div class="num">04 / CAPTURE</div>
             <h3>Photography services</h3>
             <p>
-              I offer photography sessions for individuals, families,
-              and special occasions. Let me help you capture life's
-              meaningful moments with beautiful photographs you'll
-              treasure for years to come.
+              I offer photography sessions for individuals, families, and
+              special occasions—capturing meaningful moments you’ll treasure
+              for years to come.
             </p>
           </article>
         </div>
       </div>
     </section>
-
-    <!-- Before-and-after gallery -->
     <section id="work">
       <div class="wrap">
         <div class="section-head">
           <div class="eyebrow">The restoration portfolio</div>
           <h2>Every picture has a past.</h2>
           <p class="gallery-intro">
-            Every photograph tells a story worth preserving.
-            Explore these before-and-after examples to see how
-            thoughtful restoration can help treasured memories
-            shine again.
+            Every photograph tells a story worth preserving. Explore these
+            before-and-after examples to see how thoughtful restoration can
+            help treasured memories shine again.
           </p>
         </div>
-
         <div class="gallery-grid">
-
-          <!-- EXAMPLE 1: Replace these two image files with your first pair. -->
           <article class="gallery-card">
             <h3>A treasured memory</h3>
-            <p class="gallery-description">
-              Before and after restoration
-            </p>
+            <p class="gallery-description">Before and after restoration</p>
             <div class="comparison">
               <figure class="photo-frame">
-                <img
-                  src="images/example-1-before.jpg"
-                  alt="Original photograph before restoration, example one"
-                  loading="lazy"
-                >
+                <img src="images/example-1-before.jpg" alt="Original photograph before restoration, example one" loading="lazy">
                 <figcaption>Before</figcaption>
               </figure>
               <figure class="photo-frame">
-                <img
-                  src="images/example-1-after.jpg"
-                  alt="Restored photograph after restoration, example one"
-                  loading="lazy"
-                >
+                <img src="images/example-1-after.jpg" alt="Restored photograph after restoration, example one" loading="lazy">
                 <figcaption>After</figcaption>
               </figure>
             </div>
           </article>
-
-          <!-- EXAMPLE 2: Replace these two image files with your second pair. -->
           <article class="gallery-card">
             <h3>Bringing details back</h3>
-            <p class="gallery-description">
-              Before and after restoration
-            </p>
+            <p class="gallery-description">Before and after restoration</p>
             <div class="comparison">
               <figure class="photo-frame">
-                <img
-                  src="images/example-2-before.jpg"
-                  alt="Original photograph before restoration, example two"
-                  loading="lazy"
-                >
+                <img src="images/example-2-before.jpg" alt="Original photograph before restoration, example two" loading="lazy">
                 <figcaption>Before</figcaption>
               </figure>
               <figure class="photo-frame">
-                <img
-                  src="images/example-2-after.jpg"
-                  alt="Restored photograph after restoration, example two"
-                  loading="lazy"
-                >
+                <img src="images/example-2-after.jpg" alt="Restored photograph after restoration, example two" loading="lazy">
                 <figcaption>After</figcaption>
               </figure>
             </div>
           </article>
-
-          <!-- EXAMPLE 3: Replace these two image files with your third pair. -->
           <article class="gallery-card">
             <h3>Preserving family history</h3>
-            <p class="gallery-description">
-              Before and after restoration
-            </p>
+            <p class="gallery-description">Before and after restoration</p>
             <div class="comparison">
               <figure class="photo-frame">
-                <img
-                  src="images/example-3-before.jpg"
-                  alt="Original photograph before restoration, example three"
-                  loading="lazy"
-                >
+                <img src="images/example-3-before.jpg" alt="Original photograph before restoration, example three" loading="lazy">
                 <figcaption>Before</figcaption>
               </figure>
               <figure class="photo-frame">
-                <img
-                  src="images/example-3-after.jpg"
-                  alt="Restored photograph after restoration, example three"
-                  loading="lazy"
-                >
+                <img src="images/example-3-after.jpg" alt="Restored photograph after restoration, example three" loading="lazy">
                 <figcaption>After</figcaption>
               </figure>
             </div>
           </article>
-
         </div>
-
         <p class="gallery-note">
-          Each restoration is unique. Results depend on the quality,
-          condition, and available detail of the original photograph.
+          Each restoration is unique. Results depend on the quality, condition,
+          and available detail of the original photograph.
         </p>
       </div>
     </section>
-
-    <!-- How it works -->
     <section class="soft" id="process">
       <div class="wrap">
         <div class="section-head">
           <div class="eyebrow">Simple &amp; personal</div>
           <h2>From old print to lasting keepsake.</h2>
         </div>
-
         <div class="steps">
           <article class="step">
             <div class="eyebrow">Step one</div>
             <h3>Tell me the story</h3>
             <p>
-              Describe the photo, the damage, and what you hope
-              to preserve. A clear scan or photo of the print
-              helps me assess it.
+              Describe the photo, the damage, and what you hope to preserve.
+              A clear scan or photo of the print helps me assess it.
             </p>
           </article>
-
           <article class="step">
             <div class="eyebrow">Step two</div>
             <h3>Discuss the options</h3>
             <p>
-              I’ll review the image and discuss the scope,
-              estimated price, timing, and what can realistically
-              be improved before work begins.
+              I’ll review the image and discuss the scope, estimated price,
+              timing, and what can realistically be improved before work begins.
             </p>
           </article>
-
           <article class="step">
             <div class="eyebrow">Step three</div>
             <h3>Keep the memory</h3>
             <p>
-              Once we agree on the plan, the restored digital
-              image can be delivered for you to save, share, or print.
+              Once we agree on the plan, the restored digital image can be
+              delivered for you to save, share, or print.
             </p>
           </article>
         </div>
       </div>
     </section>
-
-    <!-- About Victoria -->
     <section id="about">
       <div class="wrap about-grid">
         <div>
           <div class="eyebrow">Meet Victoria</div>
-          <h2 class="about-mark">
-            Behind the camera, preserving the stories.
-          </h2>
+          <h2 class="about-mark">Behind the camera, preserving the stories.</h2>
         </div>
-
         <div class="about-copy">
           <p>
-            Hello, I'm Victoria. My love of photography began in 2006,
-            when I bought my first camera. From that moment on, I rarely
-            went anywhere without a way to capture the world around me—
-            whether it was my first DSLR or the camera on my phone.
-            Over the years, photography has become much more than taking
-            pictures; it’s a way of noticing the little details,
-            holding on to meaningful moments, and preserving the
-            stories that make up a life.
+            My love of photography began in 2006, when I
+            received my first digital camera. From that moment on, I rarely went anywhere
+            without a way to capture the world around me—whether it was my first
+            DSLR or the camera on my phone. Over the years, photography has
+            become much more than taking pictures; it’s a way of noticing the
+            little details, holding on to meaningful moments, and preserving
+            the stories that make up a life.
           </p>
-
           <p>
-            That same love is what draws me to photo restoration
-            and digitization. Old photographs are more than images—they’re
-            pieces of family history, connections to loved ones,
-            and memories that deserve to be passed down. I’m
-            passionate about helping preserve those treasures so
-            they can be enjoyed, shared, and remembered for
-            generations to come. At Photographic Memory Atelier,
-            every photograph is treated with care and respect
-            for the story it holds.
+            That same love is what draws me to photo restoration and digitization.
+            Old photographs are more than images—they’re pieces of family history,
+            connections to loved ones, and memories that deserve to be passed down.
+            I’m passionate about helping preserve those treasures so they can be
+            enjoyed, shared, and remembered for generations to come.
           </p>
-
           <p>
-            Photography isn't my only passion. I hold a B.S. in Criminology
-            and have spent the past 14 years developing a career in IT.
-            Throughout that time, I've learned the value of patience,
-            attention to detail, and building lasting relationships—
-            qualities I bring to every photography project.
+            The name <em>Photographic Memories</em> and
+ <em>Mit Liebe bewahrt,</em> “preserved with love”—are
+            Inspired by my Mother and Oma, and are a fitting reminder of the care and affection behind the photographs
+            and stories we hold dear.
           </p>
-
           <p>
-            Beyond my profession, my Catholic faith plays a significant
-            role in my life and shapes the way I see the world. I believe
-            some of life's greatest gifts are found in everyday moments,
-            family traditions, and meaningful connections. My mission is
-            to capture those moments beautifully and authentically,
-            giving you photographs you'll treasure long after the day
-            has passed.
+            Photography isn't my only passion. I hold a B.S. in Criminology and
+            have spent years building a career in IT. That work has taught me
+            the value of patience, attention to detail, and building lasting
+            relationships—qualities I bring to every photography project.
           </p>
+          <div class="heritage-note">
+            <h3>A tailored process</h3>
+            <p>
+              <em>Handled with care.</em> From start to finish, your photography needs will be handled with the best care, using the equipment that best fits your request.
+            </p>
+          </div>
         </div>
       </div>
     </section>
-
-    <!-- Frequently asked questions -->
     <section class="soft" id="faq">
       <div class="wrap">
         <div class="section-head">
           <div class="eyebrow">A few helpful answers</div>
           <h2>Frequently asked questions</h2>
         </div>
-
         <div class="faq">
           <details>
             <summary>Can every old photograph be fully restored?</summary>
             <p>
-              Not always. Results depend on the image quality and
-              the amount of missing or damaged detail. I’ll be honest
-              about what seems possible before accepting a project.
+              Not always. Results depend on the image quality and the amount
+              of missing or damaged detail. I’ll be honest about what seems
+              possible before accepting a project.
             </p>
           </details>
-
           <details>
             <summary>Do I need to mail you the original?</summary>
             <p>
-              For digital restoration, a high-quality scan or
-              well-lit, straight-on photo is often enough to begin.
-              Keep the original safe; don’t mail it unless a
-              separate arrangement is explicitly agreed.
+              For digital restoration, a high-quality scan or well-lit,
+              straight-on photo is often enough to begin. Keep the original
+              safe; don’t mail it unless a separate arrangement is explicitly agreed.
             </p>
           </details>
-
           <details>
             <summary>How much does restoration cost?</summary>
             <p>
-              Pricing depends on the photograph’s condition,
-              complexity, and requested result. Contact me with
-              a description and I can discuss a quote before
-              any work begins.
+              Pricing depends on the photograph’s condition, complexity, and
+              requested result. Contact me with a description and I can discuss
+              a quote before any work begins.
             </p>
           </details>
-
           <details>
             <summary>Can you colorize a black-and-white photograph?</summary>
             <p>
-              Colorization may be possible as an optional service.
-              Colors are interpretations rather than guaranteed
-              historical facts, and we can discuss a natural or
-              more artistic approach.
+              Colorization may be possible as an optional service. Colors are
+              interpretations rather than guaranteed historical facts, and we
+              can discuss a natural or more artistic approach.
             </p>
           </details>
         </div>
       </div>
     </section>
-
-    <!-- Call to action -->
     <section class="wrap" aria-label="Call to action">
       <div class="quote">
         <div>
           <h2>Some things are too precious to leave in a drawer.</h2>
-          <p>
-            Let’s talk about the photograph you’d love to see restored.
-          </p>
+          <p>Let’s talk about the photograph you’d love to see restored.</p>
         </div>
         <a class="btn" href="#contact">Start a conversation</a>
       </div>
     </section>
-
-    <!-- Contact form -->
     <section id="contact">
       <div class="wrap contact-grid">
         <div>
           <div class="eyebrow">Get in touch</div>
           <h2>Let’s preserve something meaningful.</h2>
           <p>
-            Tell me a little about your photograph or the photography
-            session you have in mind. I’ll be happy to discuss next steps.
+            Tell me a little about your photograph or the photography session
+            you have in mind. I’ll be happy to discuss next steps.
           </p>
         </div>
-
         <form class="contact-panel" id="inquiryForm">
           <label for="name">Your name</label>
-          <input
-            id="name"
-            name="name"
-            autocomplete="name"
-            required
-            placeholder="Name"
-          >
-
+          <input id="name" name="name" autocomplete="name" required placeholder="Name">
           <label for="email">Your email</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            autocomplete="email"
-            required
-            placeholder="you@example.com"
-          >
-
+          <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
           <label for="service">What can I help with?</label>
           <select id="service" name="service">
             <option>Not sure yet</option>
@@ -1043,80 +815,47 @@
             <option>Photography session</option>
             <option>Something else</option>
           </select>
-
-          <label for="message">
-            Tell me about your photograph or photography needs
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            placeholder="Please describe your photo restoration project or photography needs."
-          ></textarea>
-
-          <button class="btn" type="submit">
-            Prepare email inquiry
-          </button>
-
+          <label for="message">Tell me about your photograph or photography needs</label>
+          <textarea id="message" name="message" required placeholder="Please describe your photo restoration project or photography needs."></textarea>
+          <button class="btn" type="submit">Prepare email inquiry</button>
           <p class="smallprint">
-            Please don’t include private or sensitive information
-            in your message. This form does not upload or store photographs.
+            Please don’t include private or sensitive information in your message.
+            This form does not upload or store photographs.
           </p>
-
           <p id="formStatus" class="smallprint" aria-live="polite"></p>
         </form>
       </div>
     </section>
   </main>
-
-  <!-- Footer -->
   <footer>
     <div class="wrap footer-row">
-      <span>
-        © <span id="year"></span> Photographic Memory Atelier
-      </span>
-      <span>Made with care for the memories that matter.</span>
+      <span>© <span id="year"></span> Victoria Elizabeth Studio</span>
+      <span>Photographic Memories · Mit Liebe bewahrt</span>
     </div>
   </footer>
-
-  <!-- JavaScript -->
   <script>
     const BUSINESS_EMAIL = "starrynightfotos@gmail.com";
-
-    // Automatically update the copyright year.
     document.getElementById("year").textContent =
       new Date().getFullYear();
-
-    // Prepare an email when the contact form is submitted.
-    document
-      .getElementById("inquiryForm")
-      .addEventListener("submit", function(event) {
-        event.preventDefault();
-
-        const form = new FormData(event.currentTarget);
-
-        const subject =
-          "Photo restoration inquiry from " + form.get("name");
-
-        const body = [
-          "Name: " + form.get("name"),
-          "Reply email: " + form.get("email"),
-          "Service: " + form.get("service"),
-          "",
-          "About the photograph or photography request:",
-          form.get("message")
-        ].join("\n");
-
-        const mailtoLink =
-          "mailto:" + BUSINESS_EMAIL +
-          "?subject=" + encodeURIComponent(subject) +
-          "&body=" + encodeURIComponent(body);
-
-        document.getElementById("formStatus").textContent =
-          "Your email app should open with your inquiry ready to send.";
-
-        window.location.href = mailtoLink;
-      });
+    document.getElementById("inquiryForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const form = new FormData(event.currentTarget);
+      const subject = "Photographic Memories inquiry from " + form.get("name");
+      const body = [
+        "Name: " + form.get("name"),
+        "Reply email: " + form.get("email"),
+        "Service: " + form.get("service"),
+        "",
+        "About the photograph or photography request:",
+        form.get("message")
+      ].join("\n");
+      const mailtoLink = "mailto:" + BUSINESS_EMAIL +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+      document.getElementById("formStatus").textContent =
+        "Your email app should open with your inquiry ready to send.";
+      window.location.href = mailtoLink;
+    });
   </script>
 </body>
 </html>
